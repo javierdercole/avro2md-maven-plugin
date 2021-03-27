@@ -13,11 +13,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Goal which touches a timestamp file.
+ * Goal which creates or update the markdown avro documentation
  */
-@Mojo( name = "touch", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
-public class MyMojo
-    extends AbstractMojo
+@Mojo( name = "update-md", defaultPhase = LifecyclePhase.COMPILE )
+public class UpdateMarkdown extends AbstractMojo
 {
     /**
      * Location of the file.
