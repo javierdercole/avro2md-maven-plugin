@@ -1,0 +1,27 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "name": "ProcessResult",
+  "type": "record",
+  "doc": "Common data model sent to Subscribers",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "header",
+      "type": "org.javierdercole.schema.commons.output.Header"
+    },
+    {
+      "name": "sourceSystemResults",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.Results"],
+      "default": null
+    },
+    {
+      "name": "augmentedRealityResults",
+      "type" :["null","org.javierdercole.schema.accounts.dto.Results"],
+      "default": null
+    },
+    {
+      "name": "sourceSystemMessage",
+      "type": "org.javierdercole.schema.commons.SourceSystemMessage"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "CTMData",
+  "fields": [
+    {
+      "name": "family",
+      "type": ["null", "string"],
+      "doc": "Description of Family (using the Code List of BO)",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "level",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "BIC",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "acronym",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "autoFlow",
+      "type": "boolean",
+      "doc": "",
+      "customContext": "",
+      "aliases": []
+    }
+  ]
+}

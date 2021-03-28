@@ -1,0 +1,48 @@
+{
+	"namespace": "org.javierdercole.schema.accounts.dto",
+	"type": "record",
+	"name": "Contact",
+	"fields": [
+        {
+            "name": "name",
+            "type": ["null", "string"],
+            "doc": "Name of the contact",
+            "default": null,
+            "aliases": []
+        },
+        {
+            "name": "cellPhone",
+            "type": ["null", "string"],
+            "doc": "Cell Phone",
+            "default": null,
+            "aliases": []
+        },
+        {
+            "name": "officePhone",
+            "type": ["null", "string"],
+            "doc": "Office Phone",
+            "default": null,
+            "aliases": []
+        },
+        {
+            "name": "email",
+            "type": ["null", "string"],
+            "doc": "E-mail",
+            "default": null,
+            "aliases": []
+        },
+        {
+            "name": "fax",
+            "type": ["null", "string"],
+            "doc": "Fax",
+            "default": null,
+            "aliases": []
+        },
+        {
+            "name": "isMainContact",
+            "type": "boolean",
+            "doc": "Tells whether the contact is to be used as the main one",
+            "aliases": []
+        }
+	]
+}

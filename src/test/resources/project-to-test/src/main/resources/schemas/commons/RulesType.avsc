@@ -1,0 +1,52 @@
+{
+  "namespace": "org.javierdercole.schema.commons",
+  "name": "RulesType",
+  "type": "record",
+  "doc": "set of rules that are together according to some criteria, in the same Rules Type",
+  "aliases": [],
+  "fields":
+    [   {
+            "name": "type",
+            "type": "string",
+            "doc": "Name of this type of rules",
+            "aliases": []
+        }, {
+            "name": "description",
+            "type": "string",
+            "doc": "Text descriptor explaining this type of rules. Explains why they are aggregated.",
+            "aliases": []
+        }, {
+            "name": "version",
+            "type": "string",
+            "doc": "Version for this type of rules. X.Y.Z. X represents a major change (add or remove rule), Y represents a minor change (change rule functionality) and Z represents a patch (correction that doesn't affect functionality).",
+            "aliases": []
+        }, {
+            "name": "timestamp",
+            "type": "string",
+            "doc": "Time moment when this set of rules was triggered.",
+            "aliases": []
+        }, {
+            "name": "result",
+            "type": "double",
+            "doc": "Measure of the integrity of the content with relation to this type of rules. It's computed based on how many rules passed, weighted by severity, with relation to the number of triggered rules. This measure ranges from 0 to 100. If no rules are triggered this field assumes the value zero.",
+            "aliases": []
+        }, {
+            "name": "maxSeverity",
+            "type": "int",
+            "doc": "Maximum severity within the rules that failed. If no rules fail this field assumes the value zero. ",
+            "aliases": []
+        }, {
+            "name": "rulesMap",
+            "type": {
+                "type": "map",
+                "values": {
+                    "type": "array",
+                    "items": "Rule"
+                }
+            },
+            "doc": "Map with the rules that belong to this type. These rules are seggregated according to the results. Currently this map assumes three keys: rulesOK, rulesNOK and rulesIGNORED. Under rulesOK there is an array of all the rules that were passed with success. Under rulesNOK there is an array of all the rules that failed. Under rulesIGNORED there is an array of the rules from this type that were not triggered by this message",
+            "aliases": []
+        }
+    ]
+
+  }

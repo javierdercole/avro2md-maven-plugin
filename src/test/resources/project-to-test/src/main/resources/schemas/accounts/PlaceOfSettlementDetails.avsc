@@ -1,0 +1,81 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "PlaceOfSettlementDetails",
+  "doc": "Entity details object",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "entityCName",
+      "type": ["null", "string"],
+      "doc": "GLCS Code identifier of the Place of Settlement Entity",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "entityOrig",
+      "type": ["null", "string"],
+      "doc": "GLCS Code identifier of the Place of Settlement Entity. This field will have the name of the entity",
+      "customContext": "Original Value",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "entity",
+      "type": ["null", "string"],
+      "doc": "The Place of Settlement is the entity in whose books the transaction will occur.",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "BIC",
+      "type": ["null", "string"],
+      "doc": "Bank Identifier Code of the Place of Settlement Entity",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "accountNumber",
+      "type": ["null", "string"],
+      "doc": "Place of Settlement's account number",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+ {
+      "name": "alternativeAlias2",
+      "type": ["null", "string"],
+      "doc": "Another means of identification that a depository can use, this is relevant for the DTCC OMGEO Alert system",
+      "customContext": "alternativeAlias2",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "alternativeAlias3",
+      "type": ["null", "string"],
+      "doc": "Another means of identification that a depository can use, this is relevant for the DTCC OMGEO Alert system",
+      "customContext": "alternativeAlias3",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "alternativeAlias4",
+      "type": ["null", "string"],
+      "doc": "Another means of identification that a depository can use, this is relevant for the DTCC OMGEO Alert system",
+      "customContext": "alternativeAlias4",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "alternativeAlias5",
+      "type": ["null", "string"],
+      "doc": "Another means of identification that a depository can use, this is relevant for the DTCC OMGEO Alert system",
+      "customContext": "alternativeAlias5",
+      "default": null,
+      "aliases": []
+    }
+  ]
+}

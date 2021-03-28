@@ -1,0 +1,206 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "Account",
+  "fields": [
+
+    {
+      "name": "entity",
+      "type": ["null", "string"],
+      "doc": "Name of the Entity that owns the account.",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "entityGLCS",
+      "type": "string",
+      "doc": "GLCS code of the Entity that owns the account.",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "SEntity",
+      "type": ["null", "string"],
+      "doc": "Name of the Entity in which the account was created and its valid.",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "SEntityC",
+      "type": ["null", "string"],
+      "doc": "Code of the Entity that owns the account.",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "accountNumber",
+      "type": "string",
+      "doc": "Unique ID of the Account across all systems of a specific Entity",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "accountName",
+      "type": ["null","string"],
+      "doc": "Brief description of the account",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "accountType",
+      "type": ["null", "string"],
+      "doc": "Description of the account type (BO List of Values, this list can be different for each Entity)",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "isActive",
+      "type": "boolean",
+      "doc": "Whether the account is active or inactive",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "isInternal",
+      "type": ["null", "boolean"],
+      "doc": "is Internal",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "mnemonic",
+      "type": ["null", "string"],
+      "doc": "Mnemonic",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "statementsOptOut",
+      "type": ["null","boolean"],
+      "doc": "This field reflects the interest of the client to receive statements for this account, clients can choose to not receive them",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "addresses",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "org.javierdercole.schema.accounts.dto.Address"
+        }
+      ],
+      "default": null,
+      "doc": "",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "contacts",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "org.javierdercole.schema.accounts.dto.Contact"
+        }
+      ],
+      "default": null,
+      "doc": "Contact of this Account",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "authorizedAssetClassesIndicator",
+      "type": ["null", "string"],
+      "doc": "Granularity of the authorized asset classes under the account. ",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "authorizedAssetClasses",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "org.javierdercole.schema.accounts.dto.AuthorizedAssetClasses"
+        }
+      ],
+      "default": null,
+      "doc": "",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "propTrading",
+      "type": ["null","boolean"],
+      "doc": "This field informs if the account is used to trade with the bank own money ( Nostro Account ) or not.",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "alertData",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "org.javierdercole.schema.accounts.dto.AlertData"
+        }
+      ],
+      "default": null,
+      "doc": "Data fields from the DTCC OMGEO Alert system",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+     "name": "ctmData",
+     "type": [
+       "null",
+       {
+         "type": "array",
+         "items": "org.javierdercole.schema.accounts.dto.CTMData"
+       }
+     ],
+     "default": null,
+     "doc": "Data fields from the CTM system (CTM is a platform for automation of the trade confirmation process across multiple asset classes)",
+     "customContext": "",
+     "aliases": []
+   },
+    {
+     "name": "subAccounts",
+     "type": [
+       "null",
+       {
+         "type": "array",
+         "items": "SubAccount"
+       }
+     ],
+     "default": null,
+     "doc": "Sub-accounts that are managed by the owner of the parent account",
+     "customContext": "",
+     "aliases": []
+   },
+    {
+      "name": "systemAlias",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "org.javierdercole.schema.commons.SourceSystemAlias"
+        }
+      ],
+      "default": null,
+      "doc": "Alias of this account in the different systems. These alias must uniquely identify the account",
+      "aliases": []
+    }
+  ]
+}

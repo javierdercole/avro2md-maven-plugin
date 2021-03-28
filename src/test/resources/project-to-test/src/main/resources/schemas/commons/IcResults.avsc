@@ -1,0 +1,28 @@
+{
+  "namespace": "org.javierdercole.schema.commons",
+  "name": "IcResults",
+  "type": "record",
+  "doc": "aggregator of IC Rules Types results",
+  "aliases": [],
+  "fields": [
+    {
+        "name": "name",
+        "type": "string",
+        "doc": "Name for these Ic Results.",
+        "aliases": []
+    }, {
+        "name": "version",
+        "type": "string",
+        "doc": "Version for this type of rules. X.Y.Z. X represents a major change (add or remove type), Y represents a minor change (change type by adding/removing a rule or changing the functionality of a rule) and Z represents a patch (any correction that doesn't affect functionality).",
+        "aliases": []
+    }, {
+        "name": "typesMap",
+        "type": {
+            "type": "map",
+            "values": "RulesType"
+        },
+        "doc": "Map with the types of rules in this IC Result.",
+        "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "namespace": "org.javierdercole.schema.commons",
+  "name": "Version",
+  "type": "record",
+  "doc": "Versioning system for structure and semantics",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "structure",
+      "type": "string",
+      "doc": "Structure version. It must follow the pattern x.y.x."
+    },
+    {
+      "name": "semantics",
+      "type": "string",
+      "doc": "Represents when the meaning of the fields was defined. It must follow the pattern x.y.x."
+    }
+  ]
+}

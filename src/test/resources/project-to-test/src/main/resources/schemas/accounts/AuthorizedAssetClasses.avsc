@@ -1,0 +1,17 @@
+{
+	"namespace": "org.javierdercole.schema.accounts.dto",
+	"name": "AuthorizedAssetClasses",
+	"type": "record",
+	"doc": "AuthorizedAssetClasses",
+	"aliases": [],
+	"fields": [
+        {
+            "name": "assetClass",
+            "type": ["null", "string"],
+            "doc": "Code of the Product, Instrument or Family (using the Code List of BO)",
+            "customContext": "",
+            "default": null,
+            "aliases": []
+        }
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "namespace": "org.javierdercole.schema.commons",
+  "name": "SourceSystemMessage",
+  "type": "record",
+  "doc": "Source system data to be streamed down. Additional info about the concept.",
+  "aliases": [],
+  "fields": [
+
+    {
+      "name": "content",
+      "type": ["null","string"],
+      "doc": "String representation of the data to be streamed across integrity check projects",
+      "default": null,
+      "aliases": []
+    },
+
+    {
+      "name": "properties",
+      "type": ["null", {"type": "map", "values": "string"}],
+      "default": null,
+      "doc": "Additional properties",
+      "aliases": []
+    }
+  ]
+}

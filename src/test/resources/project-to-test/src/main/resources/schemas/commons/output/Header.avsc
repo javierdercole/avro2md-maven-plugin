@@ -1,0 +1,54 @@
+{
+  "namespace": "org.javierdercole.schema.commons.output",
+  "name": "Header",
+  "type": "record",
+  "doc": "Contains properties that are considered critical",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "internalID",
+      "type": "string",
+      "doc": "Unique id of the message"
+    },
+    {
+      "name": "headerVersion",
+      "type": "org.javierdercole.schema.commons.Version",
+      "doc": "Versioning system for structure and semantics"
+    },
+    {
+      "name": "esperantoVersion",
+      "type": "org.javierdercole.schema.commons.Version",
+      "doc": "Versioning system for structure and semantics"
+    },
+    {
+      "name": "sourceSystemMessageVersion",
+      "type": "org.javierdercole.schema.commons.Version",
+      "doc": "Versioning system for structure and semantics"
+    },
+    {
+      "name": "insertionTimestamp",
+      "type": "string",
+      "doc": "Timestamp the concept was created/inserted on the SourceSystem. Should never change! Expressed as a ISO8601 date and time. Example: Creation date/time"
+    },
+    {
+      "name": "eventTimestamp",
+      "type": "string",
+      "doc": "The moment the event that generated this message took place, expressed as a ISO8601 date and time. Example: Update or Republish time"
+    },
+    {
+      "name": "ingestionTimestamp",
+      "type": "string",
+      "doc" : "Timestamp the message was created and published to Integrity Check, expressed as a ISO8601 date and time. Example: Parsing and send to Kafka timestamp."
+    },
+     {
+      "name" : "processingTimestamp",
+      "type" : "string",
+      "doc" : "The moment this message was processed by Integrity Check, expressed as a ISO8601 date and time. IC will calculate this value when processing."
+     },
+     {
+       "name": "originalInternalID",
+       "type": "string",
+       "doc": "internalID of the message that generates the output."
+     }
+  ]
+}

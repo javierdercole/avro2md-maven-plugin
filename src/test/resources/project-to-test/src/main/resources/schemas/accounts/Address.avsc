@@ -1,0 +1,56 @@
+{
+	"namespace": "org.javierdercole.schema.accounts.dto",
+	"name": "Address",
+	"type": "record",
+	"doc": "Addresses",
+	"aliases": [],
+	"fields": [
+        {
+            "name": "line",
+            "type": ["null", "string"],
+            "doc": "Address of the account",
+            "customContext": "",
+            "default": null,
+            "aliases": []
+        },
+		{
+			"name": "city",
+			"type": ["null", "string"],
+			"doc": "City",
+			"customContext": "",
+			"default": null,
+			"aliases": []
+		},
+		{
+			"name": "state",
+			"type": ["null", "string"],
+			"doc": "State in ISO 3166-2 code",
+			"customContext": "",
+			"default": null,
+			"aliases": []
+		},
+		{
+			"name": "country",
+			"type": ["null", "string"],
+			"doc": "Country  in ISO 3166 code with 2 characters",
+			"customContext": "Country ",
+			"default": null,
+			"aliases": []
+		},
+		{
+			"name": "postalCode",
+			"type": ["null", "string"],
+			"doc": "Postal Code",
+			"customContext": "",
+			"default": null,
+			"aliases": []
+		},
+		{
+            "name": "isMainAddress",
+            "type": "boolean",
+            "doc": "Tells whether the address is to be used as the main one",
+            "customContext": "",
+            "aliases": []
+        }
+	]
+}

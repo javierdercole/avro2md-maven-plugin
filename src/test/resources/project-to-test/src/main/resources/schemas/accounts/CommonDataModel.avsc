@@ -1,0 +1,22 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "name": "CommonDataModel",
+  "type": "record",
+  "doc": "Common data model sent by publishers",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "header",
+      "type": "org.javierdercole.schema.commons.input.Header"
+    },
+    {
+      "name": "esperanto",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.Account"],
+      "default": null
+    },
+    {
+      "name": "sourceSystemMessage",
+      "type": "org.javierdercole.schema.commons.SourceSystemMessage"
+    }
+  ]
+}

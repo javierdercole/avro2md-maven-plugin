@@ -1,0 +1,41 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "AlertData",
+  "doc": "Alert Data properties",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "family",
+      "type": ["null", "string"],
+      "doc": "Description of Family (using the Code List of BO)",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "acronym",
+      "type": ["null", "string"],
+      "doc": "Identifier at LEI level which represents the investment manager organization as a legal entity",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "accessCode",
+      "type": ["null", "string"],
+      "doc": "Identifier assigned to an account by the investment manager",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "BIA",
+      "type": ["null", "string"],
+      "doc": "Broker Internal Account Numbers. The BIA is a identifier that brokers can use in Alert to cross-reference accounts between systems",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+	"namespace": "org.javierdercole.schema.contracts.dto",
+	"type": "record",
+	"name": "Flow",
+	"fields": [{
+			"name": "nominal",
+			"type": ["null", "double"],
+			"doc": "Flow current nominal amount, meaning the amount reference for the flow calculation.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "nominalCurrency",
+			"type": ["null", "string"],
+			"doc": "Nominal defined for the flow",
+			"customContext": "Finantial Info",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "amount",
+			"type": "double",
+			"doc": "The amount of the flow means the amount which is paid or received by the buyer/Seller of the deal upon the settlement of the transaction.",
+			"aliases": []
+		}, {
+			"name": "amountCurrency",
+			"type": "string",
+			"doc": "Flow Currency, expressed using the International Standards.",
+			"aliases": []
+		}, {
+			"name": "startDate",
+			"type": ["null", "string"],
+			"doc": "Date when obligations under the contract come into effect. Also known as Start date or Effective Date, depending on the product.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "endDate",
+			"type": ["null", "string"],
+			"doc": "The date on which obligations under a derivative transaction end to accrue or take effect.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "settlementDate",
+			"type": "string",
+			"doc": "The effective date that the legal transfer of cash is actually executed between the buyer and seller (effective payment date).",
+			"aliases": []
+		}, {
+			"name": "flowType",
+			"type": "string",
+			"doc": "This field will identify the typology of the flow (interests, fees, etc).",
+			"aliases": []
+		}, {
+			"name": "flowDirection",
+			"type": "string",
+			"doc": "the exchange of flows between the counterparties of the deal and the user",
+			"aliases": []
+		}, {
+			"name": "fixingDate",
+			"type": ["null", "string"],
+			"doc": "Date at which floating values, will be deemed to be fixed, and therefore not changing.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "flowRate",
+			"type": ["null", "double"],
+			"doc": "Final rate applied to the calculated flow.",
+			"default": null,
+			"aliases": []
+		}
+	]
+}

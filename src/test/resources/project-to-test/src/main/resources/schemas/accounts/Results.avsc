@@ -1,0 +1,19 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "name": "Results",
+  "type": "record",
+  "doc": "",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "esperanto",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.Account"],
+      "default": null
+    },
+    {
+      "name": "IcResults",
+      "type": ["null","org.javierdercole.schema.commons.IcResults"],
+      "default": null
+    }
+  ]
+}

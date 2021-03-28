@@ -1,24 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.javierdercole</groupId>
-  <artifactId>avro2md-maven-plugin</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>Test MyMojo</name>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>avro2md-maven-plugin</artifactId>
-        <configuration>
-          <!-- Specify the MyMojo parameter -->
-          <outputDirectory>target/test-harness/project-to-test</outputDirectory>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <groupId>org.javierdercole</groupId>
+    <artifactId>my-sample-avros</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+    <name>Test MyMojo</name>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro-maven-plugin</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.javierdercole</groupId>
+                <artifactId>avro2md-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Specify the MyMojo parameter -->
+                    <outputDirectory>target/test-harness/project-to-test</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.9.2</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <stringType>String</stringType>
+                            <sourceDirectory>${project.basedir}/src/main/resources/schemas</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <imports>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/Version.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/SourceSystemAlias.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/input/Header.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/output/Header.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/SourceSystemMessage.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/Rules.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/RulesType.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/commons/IcResults.avsc</import>
+
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/Address.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/AlertData.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/CTMData.avsc</import>
+                                <import>
+                                    ${project.basedir}/src/main/resources/schemas/accounts/AuthorizedAssetClasses.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/Contact.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/EntityDetails.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/CustodianDetails.avsc
+                                </import>
+                                <import>
+                                    ${project.basedir}/src/main/resources/schemas/accounts/PlaceOfSettlementDetails.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/InterestedParty.avsc
+                                </import>
+                                <import>
+                                    ${project.basedir}/src/main/resources/schemas/accounts/SettlementInstruction.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/SubAccount.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/Account.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/CommonDataModel.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/Results.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/accounts/ProcessResult.avsc
+                                </import>
+
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/Flow.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/Leg.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/Deal.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/Contract.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/CommonDataModel.avsc
+                                </import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/Results.avsc</import>
+                                <import>${project.basedir}/src/main/resources/schemas/contracts/ProcessResult.avsc
+                                </import>
+
+                            </imports>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <!--The clean plugin is configured to delete the auto generated java sources
+                on each maven compilation. This way we can assure that any change to any file
+                is reflected into all schemas and files.-->
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>src/main/java/org/javierdercole</directory>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+    </profiles>
 </project>

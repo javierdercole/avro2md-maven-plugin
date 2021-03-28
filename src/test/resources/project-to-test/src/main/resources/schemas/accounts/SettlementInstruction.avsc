@@ -1,0 +1,268 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "SettlementInstruction",
+  "fields": [
+    {
+      "name": "isDefault",
+      "type": "boolean",
+      "doc": "Tells if the settlement instruction is to be used as default",
+      "customContext": "isDefault",
+      "aliases": []
+    },
+    {
+      "name": "isActive",
+      "type": "boolean",
+      "doc": "status of SSI",
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "branch",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "family",
+      "type": ["null", "string"],
+      "doc": "Description of Family (using the Code List of BO)",
+      "customContext": "family",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "product",
+      "type": ["null", "string"],
+      "doc": "product of SSI",
+      "customContext": "product",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "instrument",
+      "type": ["null", "string"],
+      "doc": "instrument of SSI",
+      "customContext": "instrument",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "instrumentType",
+      "type": ["null", "string"],
+      "doc": "instrumentType of SSI",
+      "customContext": "instrumentType",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "validFrom",
+      "type": ["null", "string"],
+      "doc": "validFrom of SSI",
+      "customContext": "validFrom",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "validTo",
+      "type": ["null", "string"],
+      "doc": "validTo of SSI",
+      "customContext": "validTo",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "settlementType",
+      "type": ["null", "string"],
+      "doc": "settlementType of SSI",
+      "customContext": "settlementType",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "currency",
+      "type": ["null", "string"],
+      "doc": "Currency in ISO 4217",
+      "customContext": "currency",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "country",
+      "type": ["null", "string"],
+      "doc": "Country in ISO 3166",
+      "customContext": "currency",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "payReceive",
+      "type": ["null", "string"],
+      "doc": "payReceive of SSI. Possible Values: Pay, Receive, Both",
+      "customContext": "payReceive",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "objective",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "instrumentGroup",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "channel",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "originSystem",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "settlementMethod",
+      "type": ["null", "string"],
+      "doc": "settlementMethod of SSI",
+      "customContext": "settlementMethod",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "counterpartyBIC",
+      "type": ["null", "string"],
+      "doc": "counterpartyBIC of SSI",
+      "customContext": "counterpartyBIC",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "placeOfSettlement",
+      "type": ["null", "PlaceOfSettlementDetails"],
+      "doc": "placeOfSettlement of SSI",
+      "customContext": "placeOfSettlement",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "accountWith",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.EntityDetails"],
+      "doc": "accountWith of SSI",
+      "customContext": "accountWith",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "settlementEntity",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.EntityDetails"],
+      "doc": "settlementEntity of SSI",
+      "customContext": "settlementEntity",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "custodian",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.CustodianDetails"],
+      "doc": "custodian of SSI",
+      "customContext": "custodian",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "subcustodian",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.EntityDetails"],
+      "doc": "subcustodian of SSI",
+      "customContext": "subcustodian",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "agent",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.EntityDetails"],
+      "doc": "agent of SSI",
+      "customContext": "agent",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "clearing",
+      "type": ["null", "org.javierdercole.schema.accounts.dto.EntityDetails"],
+      "doc": "clearing of SSI",
+      "customContext": "clearing",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "directMethod",
+      "type": ["null", "string"],
+      "doc": "clearing of SSI",
+      "customContext": "clearing",
+      "default": null,
+      "aliases": []
+    },
+   {
+     "name" : "lastUseDate",
+     "type" : ["null", "string"],
+     "doc" : "",
+     "customContext": "",
+     "default": null,
+     "aliases": []
+   },
+   {
+     "name" : "complemNo",
+     "type" : ["null", "string"],
+     "doc" : "",
+     "customContext": "",
+     "default": null,
+     "aliases": []
+   },
+   {
+     "name" : "inputSource",
+     "type" : ["null", "string"],
+     "doc" : "",
+     "customContext": "",
+     "default": null,
+     "aliases": []
+   },
+   {
+     "name" : "alertID",
+     "type" : ["null", "string"],
+     "doc" : "",
+     "customContext": "",
+     "default": null,
+     "aliases": []
+   },
+    {
+      "name": "interestedParty",
+      "type": [
+          "null",
+          {
+            "type": "array",
+            "items": "org.javierdercole.schema.accounts.dto.InterestedParty"
+          }
+        ],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+
+    }
+  ]
+}

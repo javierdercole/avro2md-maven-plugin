@@ -1,0 +1,134 @@
+{
+	"namespace": "org.javierdercole.schema.contracts.dto",
+	"type": "record",
+	"name": "Deal",
+	"fields": [{
+			"name": "dealId",
+			"type": "string",
+			"doc": "Deal Id",
+			"aliases": []
+		}, {
+			"name": "channel",
+			"type": ["null", "string"],
+			"doc": "The name of the system that originated the trade",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "hasSSI",
+			"type": ["null", "boolean"],
+			"doc": "Field indicating if the trade has settlement instructions assigned to this specific contract.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "validationSubStatus",
+			"type": ["null", "string"],
+			"doc": "Status of validation in the source system.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "branch",
+			"type": ["null", "string"],
+			"doc": "This field aims to identify the entity Branch detaining the portfolio where the contract is booked.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "desk",
+			"type": ["null", "string"],
+			"doc": "Field identifies the book or trading desk of the deal. In this case is the Code.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "instrument",
+			"type": "string",
+			"doc": "Each deal, accordingly to its characteristics will have a typology directly identifying the financial instrument that is transacted.",
+			"aliases": []
+		}, {
+			"name": "portfolio",
+			"type": "string",
+			"doc": "This field identifies the portfolio where the deal is booked",
+			"aliases": []
+		}, {
+			"name": "effectiveDate",
+			"type": "string",
+			"doc": "Is the effective deal start date.",
+			"aliases": []
+		}, {
+			"name": "tradeDate",
+			"type": ["null", "string"],
+			"doc": "Corresponds to the date when the negotiation is closed.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "adjustedMaturityDate",
+			"type": "string",
+			"doc": "Deal adjusted maturity date, expressed in UTC",
+			"aliases": []
+		}, {
+			"name": "breakClause",
+			"type": ["null", "string"],
+			"doc": "First date when one of the entities as the right to call for anticipated termination or re-pricing.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "breakClauseFrequency",
+			"type": ["null", "string"],
+			"doc": "The periodicity by which one of the entities as the right to call for anticipated termination or re-pricing during the life of a long term swap.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "startExchangeRate",
+			"type": ["null", "double"],
+			"doc": "Exchange rate contracted.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "resetSwap",
+			"type": ["null", "boolean"],
+			"doc": "In the case of a Currency Swap, in the negotiation can be define if the initial exchange rate agreed can be reset or not.",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "dealStatus",
+			"type": ["null", "string"],
+			"doc": "Status of the deal during its life cycle",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "legs",
+			"type": [
+				"null", {
+					"type": "map",
+					"values": "org.javierdercole.schema.contracts.dto.Leg"
+				}
+			],
+			"default": null,
+			"doc": "",
+			"aliases": []
+		}, {
+			"name": "flows",
+			"type": [
+				"null", {
+					"type": "array",
+					"items": "org.javierdercole.schema.contracts.dto.Flow"
+				}
+			],
+			"doc": "",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "sourceSystemAlias",
+			"type": "org.javierdercole.schema.commons.SourceSystemAlias",
+			"doc": "Structure that contains the unique concept id for the sourcesystem"
+		}, {
+			"name": "otherSystemAlias",
+			"type": [
+				"null", {
+					"type": "array",
+					"items": "org.javierdercole.schema.commons.SourceSystemAlias"
+				}
+			],
+			"doc": "Structure that contains other unique ids for the concept.",
+			"default": null
+		}
+	]
+}

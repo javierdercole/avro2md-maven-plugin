@@ -1,0 +1,41 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "EntityDetails",
+  "doc": "Entity details object",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "entityGLCS",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "entity",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "BIC",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "accountNumber",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    }
+  ]
+}

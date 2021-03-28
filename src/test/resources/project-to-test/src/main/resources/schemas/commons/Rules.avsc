@@ -1,0 +1,45 @@
+{
+  "namespace": "org.javierdercole.schema.commons",
+  "name": "Rule",
+  "type": "record",
+  "doc": "set of rules that are together according to some criteria, in the same Rules Type",
+  "aliases": [],
+  "fields":[
+   {
+        "name": "id",
+        "type": "string",
+        "doc": "Unique identifier for the rule.",
+        "aliases": []
+      },
+      {
+        "name": "version",
+        "type": "string",
+        "doc": "Version of the rule in the format is X.Y. X represents a change in rule functionality and Y represents a patch to fix existing functionality.",
+        "aliases": []
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "doc": "Text description of the rule saying what is being tested.",
+        "aliases": []
+      },
+      {
+        "name": "severity",
+        "type": "int",
+        "doc": "Severity of the rule. States how important this rule is when compared to others. Must be between 0 and 100.",
+        "aliases": []
+      },
+      {
+        "name": "result",
+        "type": ["null", "boolean"],
+        "doc": "Result of the current rule. Is null if the rule was ignored. If the rule was run, it is true if the rule has passed and false if there was a problem.",
+        "aliases": []
+      },
+      {
+        "name": "detail",
+        "type": ["null", "string"],
+        "doc": "Additional info to understand what went wrong if the rule did not pass. This field is only filled if the rule failed.",
+        "aliases": []
+      }
+    ]
+ }

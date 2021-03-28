@@ -1,0 +1,57 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "CustodianDetails",
+  "doc": "Entity details object",
+  "aliases": [],
+  "fields": [
+    {
+      "name": "entityCName",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "entityOrig",
+      "type": ["null", "string"],
+      "doc": "SourceSystem original value for property Entity",
+      "customContext": "Original Value",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "entity",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "BIC",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "accountNumber",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    },
+    {
+      "name": "cashAccountNumber",
+      "type": ["null", "string"],
+      "doc": "",
+      "default": null,
+      "customContext": "",
+      "aliases": []
+    }
+  ]
+}

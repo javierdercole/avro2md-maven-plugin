@@ -1,0 +1,27 @@
+{
+	"namespace": "org.javierdercole.schema.commons",
+	"name": "SourceSystemAlias",
+	"type": "record",
+	"doc": "SourceSystems Alias",
+	"aliases": [],
+	"fields": [
+		{
+			"name": "sourceSystem",
+			"type": "string",
+			"doc": "Source system that is sending this alias",
+			"customContext": "SourceSystem for this alias"
+		},
+        {
+            "name": "aliasName",
+            "type": "string",
+            "doc": "Description of the alias",
+            "customContext": "alias name"
+        },
+		{
+			"name": "value",
+			"type": "string",
+			"doc": "Alias value",
+			"customContext": "alias value"
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+  "namespace": "org.javierdercole.schema.contracts.dto",
+  "type": "record",
+  "name": "Leg",
+  "fields": [
+    {
+      "name": "legDirection",
+      "type": "string",
+      "doc": "Indicates the direction of the leg.",
+      "aliases": []
+    },
+    {
+      "name": "nature",
+      "type": "string",
+      "doc": "The field identifies the rate type to each of the legs, and takes the value: FIXED or FLOATING.",
+      "aliases": []
+    },
+    {
+      "name": "exchangeRate",
+      "type": ["null", "double"],
+      "doc": "Current exchange rate applied (in the case of a Reset Currency Swap).",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "indexReference",
+      "type": ["null", "string"],
+      "doc": "For interests, an index refers to an interest rate index, which is based on an instrument or basket of financial instruments. It serves to calculate the interest rate.",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "rate",
+      "type": ["null","double"],
+      "doc": "Fixed Interest Rate (Used for RD trades).",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "spread",
+      "type": ["null","double"],
+      "doc": "The spread is the price/margin added to the floating interest rate applied. The interest is calculated base in the sum of the spread + interest rate.",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "multiplier",
+      "type": ["null","double"],
+      "doc": "Spread multiplier is the pricing supplement applicable to the interest rate for a particular floating rate.",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "dayCountConvention",
+      "type": "string",
+      "doc": "Day count convention that determines the calculation base for interest payments, determining the number of days between two dates and the number of days in a year.",
+      "aliases": []
+    },
+    {
+      "name": "interestCalculationMethod",
+      "type": ["null","string"],
+      "doc": "This refers to type of interest applied and calculated.",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "paymentConvention",
+      "type": ["null","string"],
+      "doc": "Defines if a flow is settled in the start date of the calculation period (upfront) or in the end date of that period (in arrears).",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "businessDayConvention",
+      "type": "string",
+      "doc": "The Business Convention Day defines the lag applied to the Payment Date.",
+      "aliases": []
+    },
+    {
+      "name": "fixingFrequency",
+      "type": ["null","string"],
+      "doc": "Time unit associated with the frequency to fix the floating rate, e.g. day, week, month, 3 months, 6 months, year.",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "paymentFrequency",
+      "type": "string",
+      "doc": "Time unit associated with the frequency of payments, e.g. day, week, month, year or term of the stream.",
+      "aliases": []
+    },
+   {
+     "name": "flows",
+     "type": [
+       "null",
+       {
+         "type": "array",
+         "items": "org.javierdercole.schema.contracts.dto.Flow"
+       }
+     ],
+     "doc": "",
+     "default": null,
+     "aliases": []
+   }
+  ]
+}

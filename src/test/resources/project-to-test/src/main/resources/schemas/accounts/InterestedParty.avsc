@@ -1,0 +1,79 @@
+{
+  "namespace": "org.javierdercole.schema.accounts.dto",
+  "type": "record",
+  "name": "InterestedParty",
+  "fields": [
+    {
+      "name": "number",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "ID",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "accountNumber",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "BIC",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "contact",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "name",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "phone",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "specialIntructions1",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    },
+    {
+      "name": "specialIntructions2",
+      "type": ["null", "string"],
+      "doc": "",
+      "customContext": "",
+      "default": null,
+      "aliases": []
+    }
+  ]
+ }

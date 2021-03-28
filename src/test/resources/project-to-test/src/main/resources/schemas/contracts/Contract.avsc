@@ -1,0 +1,45 @@
+{
+	"namespace": "org.javierdercole.schema.contracts.dto",
+	"type": "record",
+	"name": "Contract",
+	"fields": [{
+			"name": "contractID",
+			"type": "string",
+			"doc": "The contract id, for cases when there is no contract logic.",
+			"aliases": []
+		}, {
+			"name": "ourReference",
+			"type": ["null", "string"],
+			"doc": "Reference",
+			"default": null,
+			"aliases": []
+		}, {
+			"name": "CIBentity",
+			"type": "string",
+			"doc": "This field identifies the entity detaining the portfolio where the contract is booked, and is an Alias.",
+			"aliases": []
+		}, {
+			"name": "counterparty",
+			"type": "string",
+			"doc": "This field aims to identify the counterpart. In this field is expressed as an Alias.",
+			"aliases": []
+		}, {
+			"name": "agreementDate",
+			"type": "string",
+			"doc": "The date that the counterparties in an Financial transaction commit to their obligations.",
+			"aliases": []
+		}, {
+			"name": "deals",
+			"type": [
+                "null", {
+                    "type": "map",
+                    "values": "org.javierdercole.schema.contracts.dto.Deal"
+                }
+            ],
+			"default": null,
+			"doc": "",
+			"customContext": "",
+			"aliases": []
+		}
+	]
+}
