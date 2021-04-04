@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 public class UpdateMarkdownTest {
     @Test
     public void firstTest() throws MojoExecutionException {
-        UpdateMarkdown mojo = new UpdateMarkdown();
+        UpdateMarkdownMojo mojo = new UpdateMarkdownMojo();
         mojo.execute();
         assertTrue(false);
     }

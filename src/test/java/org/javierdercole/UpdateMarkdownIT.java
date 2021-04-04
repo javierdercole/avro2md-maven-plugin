@@ -29,11 +29,14 @@ public class UpdateMarkdownIT {
      */
     @Test
     public void testSomething() throws Exception {
-        File pom = new File("target/test-classes/project-to-test/");
+        File basedir = new File("src/test/resources/project-to-test");
+        File pom = new File(basedir, "pom.xml");
+
         assertNotNull(pom);
         assertTrue(pom.exists());
 
-        UpdateMarkdown myMojo = (UpdateMarkdown) rule.lookupConfiguredMojo(pom, "update-md");
+        UpdateMarkdownMojo myMojo = (UpdateMarkdownMojo) rule.lookupConfiguredMojo(basedir, "update-md");
+        //UpdateMarkdownMojo myMojo = (UpdateMarkdownMojo) rule.configureMojo(new UpdateMarkdownMojo(), "avro2md-maven-plugin", pom);
         assertNotNull(myMojo);
         myMojo.execute();
 

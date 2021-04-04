@@ -35,7 +35,11 @@
                 <artifactId>avro2md-maven-plugin</artifactId>
                 <configuration>
                     <!-- Specify the MyMojo parameter -->
-                    <outputDirectory>target/test-harness/project-to-test</outputDirectory>
+                    <sourceDirectory>${project.basedir}/src/main/resources/schemas/contracts/Contract.avsc</sourceDirectory>
+                    <outputDirectory>${project.basedir}/target/avro2md/</outputDirectory>
+                    <imports>
+                        <import>${project.basedir}/src/main/resources/schemas/commons/Version.avsc</import>
+                    </imports>
                 </configuration>
             </plugin>
 
